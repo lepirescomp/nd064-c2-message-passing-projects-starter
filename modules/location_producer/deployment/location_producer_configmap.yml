@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+data:
+  KAFKA_TOPIC: "locations"
+  KAFKA_URL: "kafka-headless:9092"
+metadata:
+  name: location-producer-env

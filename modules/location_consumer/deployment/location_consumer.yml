@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    service: location-consumer
+  name: location-consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: location-consumer
+  template:
+    metadata:
+      labels:
+        service: location-consumer
+    spec:
+      containers:
+      - image: matthiasknight/udaconnect-location-consumer:latest
+        name: location-consumer
+        imagePullPolicy: Always
+        env:
+        - name: KAFKA_URL
+          valueFrom:
+            configMapKeyRef:
+              name: location-consumer-env
+              key: KAFKA_URL
+        - name: KAFKA_TOPIC
+          valueFrom:
+            configMapKeyRef:
+              name: location-consumer-env
+              key: KAFKA_TOPIC
+        - name: UDACONNECT_API_URL
+          valueFrom:
+            configMapKeyRef:
+              name: location-consumer-env
+              key: UDACONNECT_API_URL
+      restartPolicy: Always

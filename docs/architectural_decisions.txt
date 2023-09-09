@@ -1,0 +1,10 @@
+# Message Passing Strategies and Usage
+
+I decided to consume the data from locations, which as described, had a high demand,
+using for Grpc and publishing in a Kafka topic, to decouple from the other system.
+
+For frontend, I kept REST as it is well known in the industry, and most of programmers
+have a knowledge on it.
+
+Also, I splitted the location and person service, as location have a higher demand than
+person service. Splitting it provides the ability to scale them separatly
