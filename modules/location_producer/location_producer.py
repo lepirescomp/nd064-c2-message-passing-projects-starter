@@ -6,8 +6,12 @@ import LocationEvent_pb2
 import LocationEvent_pb2_grpc
 import logging
 import json
+from os import environ
 from kafka import KafkaProducer
 
+
+kafka_url = environ["KAFKA_URL"]
+kafka_topic = environ["KAFKA_TOPIC"]
 
 class LocationEventServicer(LocationEvent_pb2_grpc.ItemServiceServicer):
 
@@ -19,8 +23,8 @@ class LocationEventServicer(LocationEvent_pb2_grpc.ItemServiceServicer):
               }
             logging.info('processing entity ', request_value)
 
-            producer = KafkaProducer(bootstrap_servers=['kafka-headless:9092'],api_version=(0, 10, 0),value_serializer=lambda v: json.dumps(v).encode('utf-8'))
-            future=producer.send('sample',request_value)
+            producer = KafkaProducer(bootstrap_servers=kafka_url,api_version=(0, 10, 0),value_serializer=lambda v: json.dumps(v).encode('utf-8'))
+            future=producer.send(kafka_topic,request_value)
             producer.flush()
             return LocationEvent_pb2.LocationEventMessage(**request_value)
 

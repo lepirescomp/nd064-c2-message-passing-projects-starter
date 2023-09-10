@@ -1,0 +1,626 @@
+Request
+http://localhost:5000/api/persons
+
+Response
+[
+    {
+        "id": 5,
+        "last_name": "Smith",
+        "first_name": "Tom",
+        "company_name": "IBME"
+    },
+    {
+        "id": 6,
+        "last_name": "Chrisler",
+        "first_name": "Sony",
+        "company_name": "JKT Company"
+    },
+    {
+        "id": 1,
+        "last_name": "Fisher",
+        "first_name": "Jim",
+        "company_name": "ABC"
+    },
+    {
+        "id": 8,
+        "last_name": "Scott",
+        "first_name": "Michael",
+        "company_name": "Gaagle"
+    },
+    {
+        "id": 9,
+        "last_name": "Bernard",
+        "first_name": "Patrick",
+        "company_name": "Force"
+    }
+]
+
+--------------------------------------------------------------------------------------
+Request
+http://localhost:5000/api/persons/1
+
+Response
+{
+    "id": 1,
+    "last_name": "Fisher",
+    "first_name": "Jim",
+    "company_name": "ABC"
+}
+
+--------------------------------------------------------------------------------------
+Request
+http://localhost:5000/api/persons/1/connection?start_date=2020-01-01&end_date=2020-12-31&distance=10
+
+Response
+[
+    {
+        "person":{
+            "id": 5,
+            "last_name": "Smith",
+            "first_name": "Tom",
+            "company_name": "IBME"
+        },
+        "location": {
+            "id": 31,
+            "longitude": "37.553441",
+            "creation_time": "2020-08-15T10:37:06",
+            "latitude": "-122.290524",
+            "person_id": 5
+        }
+    },
+    {
+        "person": {
+            "id": 5,
+            "last_name": "Smith",
+            "first_name": "Tom",
+            "company_name": "IBME"
+        },
+        "location": {
+            "id": 31,
+            "longitude": "37.553441",
+            "creation_time": "2020-08-15T10:37:06",
+            "latitude": "-122.290524",
+            "person_id": 5
+        }
+    },
+    {
+        "person": {
+            "id": 5,
+            "last_name": "Smith",
+            "first_name": "Tom",
+            "company_name": "IBME"
+        },
+        "location": {
+            "id": 31,
+            "longitude": "37.553441",
+            "creation_time": "2020-08-15T10:37:06",
+            "latitude": "-122.290524",
+            "person_id": 5
+        }
+    },
+    {
+        "person": {
+            "id": 5,
+            "last_name": "Smith",
+            "first_name": "Tom",
+            "company_name": "IBME"
+        },
+        "location": {
+            "id": 30,
+            "longitude": "37.55363",
+            "creation_time": "2020-08-15T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 5
+        }
+    },
+    {
+        "person":  {
+            "id": 6,
+            "last_name": "Chrisler",
+            "first_name": "Sony",
+            "company_name": "JKT Company"
+        },
+        "location": {
+            "id": 34,
+            "longitude": "37.55363",
+            "creation_time": "2020-07-07T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 6
+        }
+    },
+    {
+        "person": {
+            "id": 5,
+            "last_name": "Smith",
+            "first_name": "Tom",
+            "company_name": "IBME"
+        },
+        "location": {
+            "id": 57,
+            "longitude": "37.55363",
+            "creation_time": "2020-07-07T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 5
+        }
+    },
+    {
+        "person": {
+            "id": 9,
+            "last_name": "Bernard",
+            "first_name": "Patrick",
+            "company_name": "Force"
+        },
+        "location": {
+            "id": 65,
+            "longitude": "37.55363",
+            "creation_time": "2020-07-07T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 9
+        }
+    },
+    {
+        "person":  {
+            "id": 5,
+            "last_name": "Smith",
+            "first_name": "Tom",
+            "company_name": "IBME"
+        },
+        "location": {
+            "id": 66,
+            "longitude": "37.55363",
+            "creation_time": "2020-07-07T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 5
+        }
+    },
+    {
+        "person": {
+            "id": 8,
+            "last_name": "Scott",
+            "first_name": "Michael",
+            "company_name": "Gaagle"
+        },
+        "location": {
+            "id": 67,
+            "longitude": "37.55363",
+            "creation_time": "2020-07-07T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 8
+        }
+    },
+    {
+        "person": {
+            "id": 6,
+            "last_name": "Chrisler",
+            "first_name": "Sony",
+            "company_name": "JKT Company"
+    },
+        "location": {
+            "id": 68,
+            "longitude": "37.55363",
+            "creation_time": "2020-08-15T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 6
+        }
+    },
+    {
+        "person": {
+            "id": 5,
+            "last_name": "Smith",
+            "first_name": "Tom",
+            "company_name": "IBME"
+        },
+        "location": {
+            "id": 30,
+            "longitude": "37.55363",
+            "creation_time": "2020-08-15T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 5
+        }
+    },
+    {
+        "person": {
+            "id": 6,
+            "last_name": "Chrisler",
+            "first_name": "Sony",
+            "company_name": "JKT Company"
+        },
+        "location": {
+            "id": 34,
+            "longitude": "37.55363",
+            "creation_time": "2020-07-07T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 6
+        }
+    },
+    {
+        "person": {
+            "id": 5,
+            "last_name": "Smith",
+            "first_name": "Tom",
+            "company_name": "IBME"
+        },
+        "location": {
+            "id": 57,
+            "longitude": "37.55363",
+            "creation_time": "2020-07-07T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 5
+        }
+    },
+    {
+        "person": {
+            "id": 9,
+            "last_name": "Bernard",
+            "first_name": "Patrick",
+            "company_name": "Force"
+        },
+        "location": {
+            "id": 65,
+            "longitude": "37.55363",
+            "creation_time": "2020-07-07T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 9
+        }
+    },
+    {
+        "person": {
+            "id": 5,
+            "last_name": "Smith",
+            "first_name": "Tom",
+            "company_name": "IBME"
+        },
+        "location": {
+            "id": 66,
+            "longitude": "37.55363",
+            "creation_time": "2020-07-07T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 5
+        }
+    },
+    {
+        "person": {
+            "id": 8,
+            "last_name": "Scott",
+            "first_name": "Michael",
+            "company_name": "Gaagle"
+        },
+        "location": {
+            "id": 67,
+            "longitude": "37.55363",
+            "creation_time": "2020-07-07T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 8
+        }
+    },
+    {
+        "person": {
+            "id": 6,
+            "last_name": "Chrisler",
+            "first_name": "Sony",
+            "company_name": "JKT Company"
+        },
+        "location": {
+            "id": 68,
+            "longitude": "37.55363",
+            "creation_time": "2020-08-15T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 6
+        }
+    },
+    {
+        "person": {
+            "id": 5,
+            "last_name": "Smith",
+            "first_name": "Tom",
+            "company_name": "IBME"
+        },
+        "location": {
+            "id": 30,
+            "longitude": "37.55363",
+            "creation_time": "2020-08-15T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 5
+        }
+    },
+    {
+        "person": {
+            "id": 6,
+            "last_name": "Chrisler",
+            "first_name": "Sony",
+            "company_name": "JKT Company"
+        },
+        "location": {
+            "id": 34,
+            "longitude": "37.55363",
+            "creation_time": "2020-07-07T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 6
+        }
+    },
+    {
+        "person": {
+            "id": 5,
+            "last_name": "Smith",
+            "first_name": "Tom",
+            "company_name": "IBME"
+        },
+        "location": {
+            "id": 57,
+            "longitude": "37.55363",
+            "creation_time": "2020-07-07T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 5
+        }
+    },
+    {
+        "person": {
+            "id": 9,
+            "last_name": "Bernard",
+            "first_name": "Patrick",
+            "company_name": "Force"
+        },
+        "location": {
+            "id": 65,
+            "longitude": "37.55363",
+            "creation_time": "2020-07-07T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 9
+        }
+    },
+    {
+        "person": {
+            "id": 5,
+            "last_name": "Smith",
+            "first_name": "Tom",
+            "company_name": "IBME"
+        },
+        "location": {
+            "id": 66,
+            "longitude": "37.55363",
+            "creation_time": "2020-07-07T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 5
+        }
+    },
+    {
+        "person": {
+            "id": 8,
+            "last_name": "Scott",
+            "first_name": "Michael",
+            "company_name": "Gaagle"
+        },
+        "location": {
+            "id": 67,
+            "longitude": "37.55363",
+            "creation_time": "2020-07-07T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 8
+        }
+    },
+    {
+        "person": {
+            "id": 6,
+            "last_name": "Chrisler",
+            "first_name": "Sony",
+            "company_name": "JKT Company"
+        },
+        "location": {
+            "id": 68,
+            "longitude": "37.55363",
+            "creation_time": "2020-08-15T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 6
+        }
+    },
+    {
+        "person":  {
+            "id": 5,
+            "last_name": "Smith",
+            "first_name": "Tom",
+            "company_name": "IBME"
+        },
+        "location": {
+            "id": 30,
+            "longitude": "37.55363",
+            "creation_time": "2020-08-15T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 5
+        }
+    },
+    {
+        "person": {
+            "id": 6,
+            "last_name": "Chrisler",
+            "first_name": "Sony",
+            "company_name": "JKT Company"
+        },
+        "location": {
+            "id": 34,
+            "longitude": "37.55363",
+            "creation_time": "2020-07-07T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 6
+        }
+    },
+    {
+        "person":  {
+            "id": 5,
+            "last_name": "Smith",
+            "first_name": "Tom",
+            "company_name": "IBME"
+        },
+        "location": {
+            "id": 57,
+            "longitude": "37.55363",
+            "creation_time": "2020-07-07T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 5
+        }
+    },
+    {
+        "person": {
+            "id": 9,
+            "last_name": "Bernard",
+            "first_name": "Patrick",
+            "company_name": "Force"
+        },
+        "location": {
+            "id": 65,
+            "longitude": "37.55363",
+            "creation_time": "2020-07-07T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 9
+        }
+    },
+    {
+        "person":  {
+            "id": 5,
+            "last_name": "Smith",
+            "first_name": "Tom",
+            "company_name": "IBME"
+        },
+        "location": {
+            "id": 66,
+            "longitude": "37.55363",
+            "creation_time": "2020-07-07T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 5
+        }
+    },
+    {
+        "person": {
+            "id": 8,
+            "last_name": "Scott",
+            "first_name": "Michael",
+            "company_name": "Gaagle"
+        },
+        "location": {
+            "id": 67,
+            "longitude": "37.55363",
+            "creation_time": "2020-07-07T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 8
+        }
+    }
+    {
+        "person":  {
+            "id": 5,
+            "last_name": "Smith",
+            "first_name": "Tom",
+            "company_name": "IBME"
+        },
+        "location": {
+            "id": 30,
+            "longitude": "37.55363",
+            "creation_time": "2020-08-15T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 5
+        }
+    },
+    {
+        "person": {
+            "id": 5,
+            "last_name": "Smith",
+            "first_name": "Tom",
+            "company_name": "IBME"
+        },
+        "location": {
+            "id": 57,
+            "longitude": "37.55363",
+            "creation_time": "2020-07-07T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 5
+        }
+    },
+    {
+        "person": {
+            "id": 9,
+            "last_name": "Bernard",
+            "first_name": "Patrick",
+            "company_name": "Force"
+        },
+        "location": {
+            "id": 65,
+            "longitude": "37.55363",
+            "creation_time": "2020-07-07T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 9
+        }
+    },
+    {
+        "person":  {
+            "id": 5,
+            "last_name": "Smith",
+            "first_name": "Tom",
+            "company_name": "IBME"
+        },
+        "location": {
+            "id": 66,
+            "longitude": "37.55363",
+            "creation_time": "2020-07-07T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 5
+        }
+    },
+    {
+        "person" {
+            "id": 8,
+            "last_name": "Scott",
+            "first_name": "Michael",
+            "company_name": "Gaagle"
+        },
+        "location": {
+            "id": 67,
+            "longitude": "37.55363",
+            "creation_time": "2020-07-07T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 8
+        }
+    },
+    {
+        "person": {
+            "id": 6,
+            "last_name": "Chrisler",
+            "first_name": "Sony",
+            "company_name": "JKT Company"
+        },
+        "location": {
+            "id": 68,
+            "longitude": "37.55363",
+            "creation_time": "2020-08-15T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 6
+        }
+    },
+    {
+        "person":  {
+            "id": 6,
+            "last_name": "Chrisler",
+            "first_name": "Sony",
+            "company_name": "JKT Company"
+        },
+        "location": {
+            "id": 34,
+            "longitude": "37.55363",
+            "creation_time": "2020-07-07T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 6
+        }
+    },
+    {
+        "person":  {
+            "id": 5,
+            "last_name": "Smith",
+            "first_name": "Tom",
+            "company_name": "IBME"
+        },
+        "location": {
+            "id": 57,
+            "longitude": "37.55363",
+            "creation_time": "2020-07-07T10:37:06",
+            "latitude": "-122.290883",
+            "person_id": 5
+        }
+    }
+]

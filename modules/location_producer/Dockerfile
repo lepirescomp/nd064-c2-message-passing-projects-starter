@@ -8,4 +8,4 @@ RUN pip install -r requirements.txt
 EXPOSE 5005
 
 COPY . .
-ENTRYPOINT ["python", "location_producer/location_producer.py"]
+ENTRYPOINT ["python", "location_producer.py"]

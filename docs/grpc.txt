@@ -1,0 +1,6 @@
+- To get the pod container.
+  ```kubectl exec -it $(kubectl get pods | grep -i "location_producer" | awk '{print $1}') -- bash```
+
+- Copy the grpc_request_example.py to modules/location_producer folder
+and execute:
+    ```python grpc_request_example.py```

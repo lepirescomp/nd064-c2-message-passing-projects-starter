@@ -31,7 +31,7 @@ spec:
         service: location-api
     spec:
       containers:
-      - image: matthiasknight/udaconnect-location-api:latest
+      - image: lepirescomp/location_api:latest
         name: location-api
         imagePullPolicy: Always
         env:

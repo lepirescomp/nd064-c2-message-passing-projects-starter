@@ -31,7 +31,7 @@ spec:
         service: location-producer
     spec:
       containers:
-      - image: matthiasknight/udaconnect-location-producer:latest
+      - image: lepirescomp/location_producer:latest
         name: location-producer
         imagePullPolicy: Always
         env:

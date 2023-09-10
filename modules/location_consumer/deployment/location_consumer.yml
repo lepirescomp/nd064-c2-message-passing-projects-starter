@@ -15,7 +15,7 @@ spec:
         service: location-consumer
     spec:
       containers:
-      - image: matthiasknight/udaconnect-location-consumer:latest
+      - image: lepirescomp/location_consumer:latest
         name: location-consumer
         imagePullPolicy: Always
         env:
